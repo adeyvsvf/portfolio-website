@@ -17,10 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const backToTop = document.querySelector('.back-to-top');
     const glitchText = document.querySelector('.glitch-text');
     
-    // Initialize animations, scrollspy and theme
+    // Initialize animations, scrollspy, theme and project filtering
     initTheme();
     initScrollSpy();
     initAnimations();
+    initProjectFilter();
     
     // Theme Toggle Functionality
     function initTheme() {
@@ -229,6 +230,47 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.classList.remove('error');
             });
         });
+    }
+    
+    // Project category filtering
+    function initProjectFilter() {
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const projects = document.querySelectorAll('.project');
+        
+        if (categoryButtons.length && projects.length) {
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get selected category
+                    const selectedCategory = this.getAttribute('data-category');
+                    
+                    // Filter projects
+                    projects.forEach(project => {
+                        if (selectedCategory === 'all' || project.getAttribute('data-category') === selectedCategory) {
+                            project.style.display = 'grid';
+                            setTimeout(() => {
+                                project.style.opacity = '1';
+                                project.style.transform = 'translateY(0)';
+                            }, 50);
+                        } else {
+                            project.style.opacity = '0';
+                            project.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                project.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                    
+                    // Trigger reveal check to update animations
+                    setTimeout(checkReveal, 350);
+                });
+            });
+        }
     }
     
     // Notification system
