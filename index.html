@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ade Kolawole | Web Designer & Developer</title>
+    
+    <!-- Space Grotesk Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-mode">
+    <!-- Header Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Ade<span>Designs</span></div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="menu-btn" aria-label="Toggle mobile menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="glitch-text" data-text="Creative Web Designer & Developer">Creative <span class="accent">Web Designer</span> & Developer</h1>
+                    <p class="hero-description">I craft innovative, responsive, and user-centric digital experiences that elevate brands and captivate audiences.</p>
+                    <div class="hero-cta">
+                        <a href="#work" class="btn primary">Explore Portfolio</a>
+                        <a href="#contact" class="btn outline">Get In Touch</a>
+                    </div>
+                    <div class="tech-stack">
+                        <span>Tech Stack</span>
+                        <div class="tech-icons">
+                            <i class="fab fa-html5" title="HTML5"></i>
+                            <i class="fab fa-css3-alt" title="CSS3"></i>
+                            <i class="fab fa-js" title="JavaScript"></i>
+                            <i class="fab fa-react" title="React"></i>
+                            <i class="fab fa-figma" title="Figma"></i>
+                            <i class="fab fa-node-js" title="Node.js"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="mockup-wrapper primary-mockup">
+                        <img src="images/dfr.png" alt="Design Preview" class="hero-mockup">
+                        <div class="mockup-shadow"></div>
+                    </div>
+                    <div class="mockup-wrapper secondary-mockup">
+                        <img src="images/MacBook-13.png" alt="MacBook Design" class="hero-mockup">
+                        <div class="mockup-shadow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll">
+                <a href="#work">
+                    <span>Scroll Down</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Work Section -->
+        <section id="work" class="work">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured <span class="accent">Work</span></h2>
+                    <p>A selection of my recent design and development projects</p>
+                </div>
+                
+                <div class="featured-projects">
+                    <!-- Project 1 -->
+                    <div class="project">
+                        <div class="project-content">
+                            <span class="project-number">01</span>
+                            <h3 class="project-title">Rover</h3>
+                            <p class="project-description">A fintech mobile application with a focus on investment tracking and portfolio management. The design combines clean interfaces with intuitive navigation for an optimal user experience.</p>
+                            <div class="project-tech">
+                                <span>React Native</span>
+                                <span>Figma</span>
+                                <span>Firebase</span>
+                            </div>
+                            <a href="#" class="btn small">View Project</a>
+                        </div>
+                        <div class="project-visual">
+                            <div class="device-mockup">
+                                <img src="images/project-1.png" alt="Rover App Screenshot" class="mockup-image">
+                                <div class="mockup-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project reverse">
+                        <div class="project-content">
+                            <span class="project-number">02</span>
+                            <h3 class="project-title">NeuralInsights</h3>
+                            <p class="project-description">An AI analytics platform that helps businesses derive meaningful insights from complex datasets through interactive visualizations and machine learning algorithms.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>D3.js</span>
+                                <span>TensorFlow</span>
+                            </div>
+                            <a href="#" class="btn small">View Project</a>
+                        </div>
+                        <div class="project-visual">
+                            <div class="device-mockup laptop">
+                                <img src="images/project-2.png" alt="AI Analytics Dashboard" class="mockup-image">
+                                <div class="mockup-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project">
+                        <div class="project-content">
+                            <span class="project-number">03</span>
+                            <h3 class="project-title">DocStream</h3>
+                            <p class="project-description">A collaborative documentation platform designed for development teams with real-time editing, version control, and integrated API documentation features.</p>
+                            <div class="project-tech">
+                                <span>TypeScript</span>
+                                <span>Next.js</span>
+                                <span>GraphQL</span>
+                            </div>
+                            <a href="#" class="btn small">View Project</a>
+                        </div>
+                        <div class="project-visual">
+                            <div class="device-mockup">
+                                <img src="images/project-3.png" alt="Documentation Platform" class="mockup-image">
+                                <div class="mockup-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="more-projects">
+                    <a href="#" class="btn outline large">View All Projects <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About <span class="accent">Me</span></h2>
+                    <p>Get to know my background and approach to design and development</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="image-frame">
+                            <img src="images/final.png" alt="Ade Kolawole" class="profile-img">
+                        </div>
+                        <div class="experience-badge">
+                            <span class="years">5+</span>
+                            <span class="text">Years Experience</span>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h3>Hello, I'm Ade Kolawole</h3>
+                        <p>I'm a passionate web designer and developer with a focus on creating immersive digital experiences that combine aesthetic appeal with functional design. Based in San Francisco, I've worked with startups and established companies to bring their digital presence to life.</p>
+                        <p>My approach blends strategic thinking with creative execution, ensuring that every project not only looks great but also achieves its business objectives. I'm particularly interested in the intersection of design and technology, exploring how they can work together to create meaningful user experiences.</p>
+                        
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>Design</h4>
+                                <ul class="skill-list">
+                                    <li>UI/UX Design</li>
+                                    <li>Wireframing</li>
+                                    <li>Prototyping</li>
+                                    <li>Design Systems</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Development</h4>
+                                <ul class="skill-list">
+                                    <li>HTML/CSS/JavaScript</li>
+                                    <li>React & React Native</li>
+                                    <li>Next.js</li>
+                                    <li>Node.js</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="about-cta">
+                            <a href="#" class="btn primary">Download Resume</a>
+                            <a href="#contact" class="btn outline">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Get in <span class="accent">Touch</span></h2>
+                    <p>Have a project in mind? Let's work together</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:hello@adekolawole.com">yvsvfkolawole@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Abuja, Nigeria</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+14151234567">090 1185 6286</a>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/ade.signs_?igsh=MWZ1YWkwcnlmeDJnOA==" aria-label="Instagram" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Dribbble" class="social-link"><i class="fab fa-dribbble"></i></a>
+                            <a href="#" aria-label="GitHub" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="Your email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Project inquiry">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn primary full-width">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Ade<span>Designs</span></div>
+                <p class="footer-tagline">Crafting digital experiences with purpose</p>
+                <div class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#work">Work</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/ade.signs_?igsh=MWZ1YWkwcnlmeDJnOA==" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ade Kolawole. All rights reserved.</p>
+                <a href="#home" class="back-to-top">
+                    Back to Top <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
