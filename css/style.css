@@ -903,15 +903,14 @@ nav {
 
 /* Portrait orientation for video */
 .video-portrait {
-    aspect-ratio: 9/16;
-    object-fit: fill;
-    background-color: transparent;
     width: 100%;
     height: 100%;
-    max-width: 100%;
+    object-fit: cover;
+    background-color: transparent;
     margin: 0;
-    border-radius: 8px;
     padding: 0;
+    border-radius: 8px;
+    display: block;
 }
 
 .device-mockup.laptop {
@@ -921,24 +920,34 @@ nav {
     margin: 0 auto;
 }
 
+/* Override for video container to ensure it doesn't use the laptop perspective */
+.project-visual .device-mockup.laptop {
+    transform: none;
+}
+
 .device-mockup.laptop:hover {
     transform: perspective(1000px) rotateX(0deg) translateY(-10px);
 }
 
 /* Specific laptop size for video content */
 .device-mockup.laptop.video-container {
-    height: 380px;
-    width: 214px; /* 9:16 aspect ratio based on 380px height */
+    height: 500px;
+    width: 280px; /* Portrait rectangular size with ~16:9 aspect ratio inverted */
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
     background-color: #1a1a1a;
-    border-radius: 16px;
+    border-radius: 12px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     margin: 0 auto;
-    aspect-ratio: 9/16;
+    transform: none !important; /* Remove any perspective transformations */
+}
+
+/* Remove hover effects for video container */
+.device-mockup.laptop.video-container:hover {
+    transform: none !important;
 }
 
 .more-projects {
