@@ -931,8 +931,8 @@ nav {
 
 /* Specific laptop size for video content */
 .device-mockup.laptop.video-container {
-    height: 500px;
-    width: 280px; /* Portrait rectangular size with ~16:9 aspect ratio inverted */
+    height: 350px;
+    width: 196px; /* Maintains the same portrait rectangular ratio */
     overflow: hidden;
     display: flex;
     justify-content: center;
