@@ -1,0 +1,15 @@
+=======================================
+SESSION LOG: April 11, 2025
+=======================================
+
+1. Verified directory structure
+2. Created/confirmed logs directory
+3. Created this log file to document actions
+4. Found the Graphic Design section in index.html
+5. Verified the replacement image exists at /Users/admin/Downloads/Portfolio/website-fixed/images/bdsjfhfd.png
+6. Successfully replaced the image path from 'images/project-3.png' to 'images/bdsjfhfd.png' in the Graphic Design section
+7. Created a custom CSS file (css/custom-additions.css) to reduce the dimensions of the image container while maintaining aspect ratio
+   - Set max-width to 75% (reduced from 100%)
+   - Centered the container with margin: 0 auto
+   - Ensured proper aspect ratio is maintained with object-fit: contain
+8. Linked the custom CSS file in the HTML header

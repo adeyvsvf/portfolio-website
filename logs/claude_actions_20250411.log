@@ -1,0 +1,108 @@
+2025-04-11 - Actions performed by Claude:
+
+1. Navigated to /Users/admin/Downloads/Portfolio/website-fixed
+2. Inspected website structure and files
+3. Found video element in index.html - the video is in the Video Project section showing "Event Flyer"
+4. Task: Make the video 30% smaller
+5. Solution: Add CSS rule to custom-additions.css to reduce the size of the video in the video section
+
+Changes made:
+- Added CSS rule in custom-additions.css to make the video 30% smaller while maintaining aspect ratio
+- The video has class "video-portrait" and is inside a div with class "device-mockup laptop"
+- Added the following CSS rule to custom-additions.css:
+  ```css
+  /* Make the video in the video section 30% smaller */
+  .project[data-category="video"] .device-mockup video.video-portrait {
+      width: 70%; /* Reduced by 30% from original 100% */
+      height: auto;
+      margin: 0 auto;
+      display: block;
+  }
+  ```
+
+COMPLETED: Video in the video section has been made 30% smaller while maintaining aspect ratio. The changes have been applied to the custom-additions.css file.
+
+ADDITIONAL CHANGE (2025-04-11):
+- Updated the CSS to reduce both the container AND the video by 30% 
+- Modified the custom-additions.css file with the following changes:
+  ```css
+  /* Make the video in the video section 30% smaller */
+  .project[data-category="video"] .device-mockup {
+      width: 70%; /* Reduced by 30% from original size */
+      margin: 0 auto;
+      transform: scale(0.7); /* Additional 30% reduction in overall size */
+      transform-origin: center center;
+  }
+
+  .project[data-category="video"] .device-mockup video.video-portrait {
+      width: 100%; /* Fill the container */
+      height: auto;
+      display: block;
+  }
+  ```
+- This applies a double reduction: first setting width to 70% and then applying a scale transform of 0.7 (70%)
+- The result is that both the container and video are significantly reduced in size
+
+ADDITIONAL CHANGE (2025-04-11):
+- Reduced the height of the design project section to make it look neater
+- Modified the custom-additions.css file with the following changes:
+  ```css
+  /* Custom styling for the Graphic Design project image */
+  .project[data-category="design"] {
+      padding: 2rem; /* Reduce padding from default 3rem */
+  }
+
+  .project[data-category="design"] .device-mockup {
+      max-width: 75%; /* Reduced from 100% */
+      margin: 0 auto; /* Center the container */
+      max-height: 350px; /* Limit maximum height */
+      overflow: hidden;
+  }
+
+  /* Preserve aspect ratio */
+  .project[data-category="design"] .device-mockup img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      max-height: 100%;
+  }
+
+  /* Make the content section more compact */
+  .project[data-category="design"] .project-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem; /* Reduced spacing between elements */
+  }
+
+  .project[data-category="design"] .project-content p {
+      margin-bottom: 0.75rem; /* Reduced margin */
+  }
+  ```
+- These changes make the design project section more compact by:
+  1. Reducing the overall padding of the section
+  2. Limiting the maximum height of the image container
+  3. Making the text content more compact with reduced spacing
+
+ADDITIONAL CHANGE (2025-04-11):
+- Reverted ALL design project height adjustment changes
+- Restored the CSS to its original state before any height adjustments:
+  ```css
+  /* Custom styling for the Graphic Design project image */
+  .project[data-category="design"] .device-mockup {
+      max-width: 75%; /* Reduced from 100% */
+      margin: 0 auto; /* Center the container */
+  }
+
+  /* Preserve aspect ratio */
+  .project[data-category="design"] .device-mockup img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+  }
+  ```
+- Removed ALL of the following modifications:
+  1. Custom padding for the project container
+  2. Height limitations (max-height property)
+  3. Overflow handling
+  4. Custom content layout adjustments
+  5. Spacing adjustments for content elements
