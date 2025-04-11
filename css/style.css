@@ -904,13 +904,14 @@ nav {
 /* Portrait orientation for video */
 .video-portrait {
     aspect-ratio: 9/16;
-    object-fit: contain;
+    object-fit: fill;
     background-color: transparent;
-    width: auto;
-    height: 380px;
+    width: 100%;
+    height: 100%;
     max-width: 100%;
     margin: 0;
     border-radius: 8px;
+    padding: 0;
 }
 
 .device-mockup.laptop {
@@ -926,19 +927,18 @@ nav {
 
 /* Specific laptop size for video content */
 .device-mockup.laptop.video-container {
-    height: auto;
-    max-height: 450px;
-    width: auto;
+    height: 380px;
+    width: 214px; /* 9:16 aspect ratio based on 380px height */
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 0;
     background-color: #1a1a1a;
     border-radius: 16px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    max-width: max-content;
     margin: 0 auto;
+    aspect-ratio: 9/16;
 }
 
 .more-projects {
