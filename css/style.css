@@ -931,16 +931,16 @@ nav {
 
 /* Specific laptop size for video content */
 .device-mockup.laptop.video-container {
-    height: 350px;
-    width: 196px; /* Maintains the same portrait rectangular ratio */
+    height: 250px;
+    width: 140px; /* Maintains the same portrait rectangular ratio */
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
     background-color: #1a1a1a;
-    border-radius: 12px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     margin: 0 auto;
     transform: none !important; /* Remove any perspective transformations */
 }
