@@ -855,6 +855,12 @@ nav {
     transition: transform 0.5s ease;
 }
 
+.device-mockup video.mockup-image {
+    object-fit: cover;
+    background-color: #000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
 .device-mockup:hover .mockup-image {
     transform: scale(1.03);
 }
@@ -869,19 +875,58 @@ nav {
     opacity: 0;
     transition: opacity 0.3s ease;
     border-radius: 12px;
+    pointer-events: none; /* This ensures clicks pass through to the video */
 }
 
 .device-mockup:hover .mockup-overlay {
     opacity: 1;
 }
 
+/* Make sure the video controls are clickable */
+.device-mockup video {
+    z-index: 2;
+    position: relative;
+}
+
+/* Custom styling for smaller video */
+.video-smaller {
+    width: 85%;
+    max-height: 380px;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Portrait orientation for video */
+.video-portrait {
+    aspect-ratio: 9/16;
+    object-fit: contain;
+    background-color: #000;
+    width: auto;
+    height: 380px;
+    max-width: 70%;
+}
+
 .device-mockup.laptop {
     transform: perspective(1000px) rotateX(5deg);
     transform-origin: bottom;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .device-mockup.laptop:hover {
     transform: perspective(1000px) rotateX(0deg) translateY(-10px);
+}
+
+/* Specific laptop size for video content */
+.device-mockup.laptop.video-container {
+    height: auto;
+    max-height: 450px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .more-projects {

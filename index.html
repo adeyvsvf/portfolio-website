@@ -225,7 +225,7 @@
                             <a href="#" class="btn small">View Case Study</a>
                         </div>
                         <div class="project-visual">
-                            <div class="device-mockup laptop">
+                            <div class="device-mockup laptop video-container">
                                 <img src="images/project-2.png" alt="FinTech Portal" class="mockup-image">
                                 <div class="mockup-overlay"></div>
                             </div>
@@ -277,9 +277,9 @@
                     <!-- Video Project -->
                     <div class="project reverse" data-category="video">
                         <div class="project-content">
-                            <span class="project-category">Video Production</span>
-                            <h3 class="project-title">Tech Product Launch</h3>
-                            <p class="project-description">A series of promotional videos for a new tech product launch, including teaser trailers, product demonstrations, and customer testimonials.</p>
+                            <span class="project-category">Motion Graphics</span>
+                            <h3 class="project-title">Event Flyer</h3>
+                            <p class="project-description">A vibrant promotional video showcasing dynamic movement and professional video editing capabilities, demonstrating our expertise in creating engaging visual content.</p>
                             <div class="project-tech">
                                 <span>Video Editing</span>
                                 <span>Motion Graphics</span>
@@ -289,8 +289,11 @@
                         </div>
                         <div class="project-visual">
                             <div class="device-mockup laptop">
-                                <img src="images/project-1.png" alt="Video Production" class="mockup-image">
-                                <div class="mockup-overlay"></div>
+                                <video width="85%" controls autoplay loop muted preload="metadata" poster="images/project-1.png" class="mockup-image video-smaller video-portrait">
+                                    <source src="Videos/Mix%20and%20minglegs.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="mockup-overlay video-overlay"></div>
                             </div>
                         </div>
                     </div>
@@ -463,13 +466,18 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Ade<span>Designs</span></div>
-                <p class="footer-tagline">Your Partner in Digital Excellence</p>
+                <div class="footer-branding">
+                    <div class="footer-logo">Ade<span>Designs</span></div>
+                    <p class="footer-tagline">Your Partner in Digital Excellence</p>
+                </div>
                 
-                <div class="footer-sections">
+                <div class="footer-grid">
                     <div class="footer-section">
-                        <h4>Services</h4>
-                        <ul>
+                        <div class="section-title">
+                            <span class="section-line"></span>
+                            <h4>Services</h4>
+                        </div>
+                        <ul class="footer-links">
                             <li><a href="#services">Web Development</a></li>
                             <li><a href="#services">Mobile Apps</a></li>
                             <li><a href="#services">Graphic Design</a></li>
@@ -477,9 +485,13 @@
                             <li><a href="#services">Social Media</a></li>
                         </ul>
                     </div>
+                    
                     <div class="footer-section">
-                        <h4>Company</h4>
-                        <ul>
+                        <div class="section-title">
+                            <span class="section-line"></span>
+                            <h4>Company</h4>
+                        </div>
+                        <ul class="footer-links">
                             <li><a href="#about">About Us</a></li>
                             <li><a href="#work">Our Work</a></li>
                             <li><a href="#">Testimonials</a></li>
@@ -487,18 +499,28 @@
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
+                    
                     <div class="footer-section">
-                        <h4>Connect</h4>
-                        <div class="footer-social">
-                            <a href="https://www.instagram.com/ade.designs" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <div class="section-title">
+                            <span class="section-line"></span>
+                            <h4>Connect</h4>
                         </div>
-                        <p class="footer-contact">info@adedesigns.com<br>+234 90 1185 6286</p>
+                        <div class="social-grid">
+                            <a href="https://www.instagram.com/ade.designs" aria-label="Instagram" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Twitter" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <div class="footer-contact">
+                            <p>info@adedesigns.com</p>
+                            <p>+234 90 1185 6286</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            
+            <div class="footer-divider"></div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2025 AdeDesigns. All rights reserved.</p>
                 <a href="#home" class="back-to-top">
