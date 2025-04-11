@@ -878,6 +878,10 @@ nav {
     pointer-events: none; /* This ensures clicks pass through to the video */
 }
 
+.video-overlay {
+    background: none;
+}
+
 .device-mockup:hover .mockup-overlay {
     opacity: 1;
 }
@@ -901,10 +905,12 @@ nav {
 .video-portrait {
     aspect-ratio: 9/16;
     object-fit: contain;
-    background-color: #000;
+    background-color: transparent;
     width: auto;
     height: 380px;
-    max-width: 70%;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 8px;
 }
 
 .device-mockup.laptop {
@@ -922,11 +928,17 @@ nav {
 .device-mockup.laptop.video-container {
     height: auto;
     max-height: 450px;
+    width: auto;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    max-width: max-content;
+    margin: 0 auto;
 }
 
 .more-projects {
