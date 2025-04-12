@@ -63,3 +63,73 @@
     max-width: 75%;
     margin: 0 auto;
 }
+
+/* Landscape Footer Styling */
+.footer-content.landscape {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.footer-sections-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 4rem;
+    flex-grow: 1;
+    margin-left: 4rem;
+}
+
+.footer-branding {
+    max-width: 250px;
+}
+
+.footer-section {
+    min-width: 160px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.section-line {
+    width: 20px;
+    height: 2px;
+    background-color: var(--accent);
+    margin-right: 10px;
+}
+
+/* Responsive adjustments for landscape footer */
+@media (max-width: 992px) {
+    .footer-content.landscape {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-sections-row {
+        margin-left: 0;
+        justify-content: center;
+        width: 100%;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .section-title {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-sections-row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .footer-section {
+        width: 100%;
+    }
+}
