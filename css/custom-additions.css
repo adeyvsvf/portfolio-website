@@ -64,6 +64,39 @@
     margin: 0 auto;
 }
 
+/* Compact Service Cards */
+.service-card {
+    padding: 1.5rem;  /* Reduced from 2.5rem */
+}
+
+.service-icon {
+    width: 50px;      /* Reduced from 70px */
+    height: 50px;     /* Reduced from 70px */
+    border-radius: 15px;
+    margin-bottom: 1rem; /* Reduced from 1.5rem */
+}
+
+.service-icon i {
+    font-size: 1.4rem; /* Reduced from 1.8rem */
+}
+
+.service-card h3 {
+    margin-bottom: 0.5rem; /* Reduced from 1rem */
+    font-size: 1.2rem;     /* Reduced from 1.4rem */
+}
+
+.service-card p {
+    margin-bottom: 0.75rem; /* Reduced from 1.5rem */
+}
+
+.service-features {
+    margin-bottom: 1rem; /* Reduced from 1.5rem */
+}
+
+.service-features li {
+    margin-bottom: 0.3rem; /* Reduced from 0.5rem */
+}
+
 /* Landscape Footer Styling */
 .footer-content.landscape {
     flex-direction: row;
