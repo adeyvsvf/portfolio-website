@@ -280,6 +280,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const sliderDots = document.querySelectorAll('.slider-dot');
         const prevBtn = document.querySelector('.slider-nav-prev');
         const nextBtn = document.querySelector('.slider-nav-next');
+        const techIcons = document.querySelectorAll('.tech-icons i');
+        const mobileAppIcon = document.querySelector('.tech-icons .fa-mobile-alt');
+        const graphicDesignIcon = document.querySelector('.tech-icons .fa-palette');
         let currentIndex = 0;
         let slideInterval;
 
@@ -289,6 +292,9 @@ document.addEventListener('DOMContentLoaded', function() {
             sliderItems.forEach(item => item.classList.remove('active'));
             sliderDots.forEach(dot => dot.classList.remove('active'));
             
+            // Reset expertise icons
+            techIcons.forEach(icon => icon.classList.remove('active-expertise'));
+            
             // Handle index wrapping
             if (index < 0) index = sliderItems.length - 1;
             if (index >= sliderItems.length) index = 0;
@@ -297,6 +303,15 @@ document.addEventListener('DOMContentLoaded', function() {
             currentIndex = index;
             sliderItems[currentIndex].classList.add('active');
             sliderDots[currentIndex].classList.add('active');
+            
+            // Highlight the appropriate expertise icon based on current slide
+            if (currentIndex === 0) {
+                // First slide (image) - highlight mobile app icon
+                mobileAppIcon.classList.add('active-expertise');
+            } else if (currentIndex === 1) {
+                // Second slide (video) - highlight graphic design icon
+                graphicDesignIcon.classList.add('active-expertise');
+            }
         }
 
         // Initialize auto slide timer
@@ -345,6 +360,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
+        // Set initial slide and highlight correct expertise icon
+        goToSlide(0);
+        
         // Start the automatic slider
         startSlideTimer();
     }
