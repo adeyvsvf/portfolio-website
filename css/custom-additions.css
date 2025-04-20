@@ -97,6 +97,162 @@
     margin-bottom: 0.3rem; /* Reduced from 0.5rem */
 }
 
+/* Hero Slider Styles */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.slider-item.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slider-item img {
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 726px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    transform: scale(1.368);
+}
+
+.slider-item video {
+    width: auto;
+    height: auto;
+    max-height: 504px;
+    max-width: 70%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    transform: scale(0.95);
+}
+
+.slider-navigation {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+}
+
+.slider-nav-prev {
+    position: absolute;
+    left: 10px; /* Moved inside the container */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+.slider-nav-next {
+    position: absolute;
+    right: 10px; /* Moved inside the container */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+.slider-nav-prev,
+.slider-nav-next {
+    background-color: transparent; /* No background */
+    color: var(--text-primary); /* Match theme colors */
+    border: none; /* No border */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: none; /* No shadow */
+    opacity: 0.5; /* Reduced opacity */
+}
+
+.slider-nav-prev:hover,
+.slider-nav-next:hover {
+    background-color: transparent; /* No background on hover */
+    color: var(--accent); /* Just change color on hover */
+    opacity: 0.8; /* Slightly increased opacity on hover */
+    transform: translateY(-50%); 
+}
+
+.slider-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.slider-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+}
+
+.slider-dot.active {
+    background-color: var(--accent);
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .slider-navigation {
+        bottom: -20px;
+    }
+    
+    .slider-nav-prev,
+    .slider-nav-next {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .slider-nav-prev {
+        left: 5px; /* Adjusted for smaller screens, but still inside container */
+    }
+    
+    .slider-nav-next {
+        right: 5px; /* Adjusted for smaller screens, but still inside container */
+    }
+    
+    .slider-dot {
+        width: 6px;
+        height: 6px;
+    }
+}
+
 /* Landscape Footer Styling */
 .footer-content.landscape {
     flex-direction: row;

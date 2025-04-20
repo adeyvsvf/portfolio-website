@@ -1,0 +1,101 @@
+[2025-04-20] - Implemented Hero Section Slider
+- Created logs folder for documentation
+- Modified hero section to include a slider with multiple items:
+  * Kept original image (rover.svg) as first slide
+  * Added video file (jhavdav.mp4) as second slide
+- Implemented slider functionality:
+  * Auto-scrolling every 5 seconds
+  * Navigation arrows for manual control
+  * Dot indicators to show current slide
+  * Pause on hover functionality
+- Changes made to the following files:
+  * index.html - Added slider structure in hero section
+  * css/custom-additions.css - Added styling for slider elements
+  * js/script.js - Added slider initialization and functionality
+
+[2025-04-20] - Fixed Hero Section Display Issue
+- Fixed CSS positioning issues that were causing the hero images to not display
+- Made changes to slider-item positioning (changed from absolute to relative)
+- Added minimum height to slider container to ensure content visibility
+- Updated image and video display properties for better rendering
+- Updated logs to document the fixes
+
+[2025-04-20] - Improved Hero Section Slider Sizing and Positioning
+- Increased the size of both the image and video
+- Set a fixed height of 500px for the slider container
+- Made both elements appear in the same position with the same dimensions
+- Applied consistent scaling (1.2x) to both the image and video
+- Added "playsinline" attribute to video for better mobile compatibility
+- Removed inline styling from image element
+- Moved navigation controls lower to not overlap with content
+- Improved transition smoothness with longer fade duration (0.8s)
+
+[2025-04-20] - Further Enhanced Hero Slider
+- Increased slider height to 600px to ensure the entire video displays properly
+- Repositioned navigation arrows to the sides of the slider:
+  * Left arrow positioned on the left side
+  * Right arrow positioned on the right side
+- Increased arrow size to 50px for better visibility
+- Kept dot indicators at the bottom center
+- Modified hover effects for side arrows
+- Separated arrow buttons from the dots container in HTML structure
+
+[2025-04-20] - Final Hero Slider Adjustments
+- Removed purple color from navigation arrows, using semi-transparent black instead (rgba(0,0,0,0.4))
+- Moved navigation arrows further out (from 40px to 60px from edges) to prevent overlap with content
+- Made the nav arrows slightly darker for better visibility
+- Restored slider height to original 500px setting
+- Adjusted video and image dimensions to fit perfectly within this height:
+  * Set fixed video height to 480px
+  * Set max-height for image to 480px 
+  * Used object-fit: contain to maintain aspect ratio
+- Added preload="auto" to video tag for smoother loading
+
+[2025-04-20] - Fine-tuned Video Display
+- Adjusted video aspect ratio for better fit in the slider
+- Changed object-fit from 'contain' to 'cover' for the video to ensure it fills the space appropriately
+- Reduced scaling from 1.2x to 1.1x for more natural appearance
+- Decreased max-width from 85% to 80% to prevent any potential overflow
+- Added controlsList="nodownload" to prevent video download
+- Made consistent changes to the image styling to ensure matching dimensions
+
+[2025-04-20] - Improved Navigation Indicators
+- Moved dot indicators down to prevent overlap with content (from bottom: 20px to bottom: -30px)
+- Made dot indicators smaller (from 10px to 8px)
+- Added subtle opacity effect to inactive dots (0.6 opacity)
+- Full opacity (1.0) for the active dot
+- Adjusted responsive settings for mobile devices
+- Reduced spacing between dots (from gap: 15px to gap: 10px)
+
+[2025-04-20] - Ensured Complete Video Visibility
+- Further reduced video size to prevent any clipping:
+  * Decreased max-height from 450px to 420px
+  * Reduced max-width from 75% to 70%
+  * Changed fixed height to auto height with max-height constraint
+  * Slightly scaled down from 1.0 to 0.95 scale factor
+- Applied same changes to image styling for consistency
+- Maintained object-fit: contain to preserve aspect ratio
+- This ensures the entire video is visible without any part being cut off
+
+[2025-04-20] - Increased Overall Size by 20%
+- Increased slider container height by 20% (from 500px to 600px)
+- Increased maximum height for content by 20% (from 420px to 504px)
+- Maintained the same max-width percentage (70%) and scale factor (0.95)
+- Kept proportions consistent across both images and video
+- Preserved all other styling properties to ensure consistent appearance
+
+[2025-04-20] - Increased Image Size Independently
+- Increased only the image size by 20% while keeping video size unchanged
+- Increased image max-height from 504px to 605px (20% increase)
+- Increased image scaling from 0.95 to 1.14 (20% increase)
+- Kept the same max-width percentage (70%)
+- Maintained all video dimensions at their previous values
+- This creates a slightly different visual emphasis between slides
+
+[2025-04-20] - Further Increased Image Size by Additional 20%
+- Increased only the image size by another 20% (now ~44% larger than original)
+- Raised image max-height from 605px to 726px
+- Increased image scaling from 1.14 to 1.368
+- Maintained the same max-width percentage (70%)
+- Kept video dimensions unchanged
+- This creates an even more dramatic difference between the image and video slides

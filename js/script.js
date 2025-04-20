@@ -17,11 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const backToTop = document.querySelector('.back-to-top');
     const glitchText = document.querySelector('.glitch-text');
     
-    // Initialize animations, scrollspy, theme and project filtering
+    // Initialize animations, scrollspy, theme, project filtering and hero slider
     initTheme();
     initScrollSpy();
     initAnimations();
     initProjectFilter();
+    initHeroSlider();
     
     // Theme Toggle Functionality
     function initTheme() {
@@ -273,6 +274,81 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    // Hero Slider Functionality
+    function initHeroSlider() {
+        const sliderItems = document.querySelectorAll('.slider-item');
+        const sliderDots = document.querySelectorAll('.slider-dot');
+        const prevBtn = document.querySelector('.slider-nav-prev');
+        const nextBtn = document.querySelector('.slider-nav-next');
+        let currentIndex = 0;
+        let slideInterval;
+
+        // Function to change slide
+        function goToSlide(index) {
+            // Reset active classes
+            sliderItems.forEach(item => item.classList.remove('active'));
+            sliderDots.forEach(dot => dot.classList.remove('active'));
+            
+            // Handle index wrapping
+            if (index < 0) index = sliderItems.length - 1;
+            if (index >= sliderItems.length) index = 0;
+            
+            // Set new active slide and dot
+            currentIndex = index;
+            sliderItems[currentIndex].classList.add('active');
+            sliderDots[currentIndex].classList.add('active');
+        }
+
+        // Initialize auto slide timer
+        function startSlideTimer() {
+            // Clear any existing interval
+            if (slideInterval) clearInterval(slideInterval);
+            
+            // Set interval for automatic sliding
+            slideInterval = setInterval(() => {
+                goToSlide(currentIndex + 1);
+            }, 5000); // Change slide every 5 seconds
+        }
+
+        // Event listeners for navigation
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                goToSlide(currentIndex - 1);
+                startSlideTimer(); // Reset timer when manually navigating
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                goToSlide(currentIndex + 1);
+                startSlideTimer(); // Reset timer when manually navigating
+            });
+        }
+
+        // Add click events to dots
+        sliderDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+                startSlideTimer(); // Reset timer when manually navigating
+            });
+        });
+
+        // Pause slider on hover
+        const sliderContainer = document.querySelector('.hero-slider');
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            sliderContainer.addEventListener('mouseleave', () => {
+                startSlideTimer();
+            });
+        }
+
+        // Start the automatic slider
+        startSlideTimer();
+    }
+
     // Notification system
     function showNotification(message, type = 'info') {
         // Remove any existing notifications
