@@ -45,11 +45,15 @@ bower_components/
 # Optional eslint cache
 .eslintcache
 
-# Large media files (videos over certain size)
+# Large media files (videos over certain size) - but exclude essential website videos
 *.mov
 *.MOV
 *.mp4
-Videos/
+
+# Essential website videos (exceptions to above rules)
+!images/jhavdav.mp4
+!images/uiuiui.mp4
+!Videos/Mix*.mp4
 
 # PDF documents that might contain sensitive info
 *.pdf
