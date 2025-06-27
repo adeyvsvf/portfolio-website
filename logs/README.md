@@ -8,6 +8,10 @@ This directory contains logs of all modifications made to the website. Each log 
 - [navigation_arrows_update.md](navigation_arrows_update.md) - Further updates to the navigation arrows styling (April 20, 2025)
 - [navigation_arrows_simplification.md](navigation_arrows_simplification.md) - Final simplification of navigation arrows (April 20, 2025)
 - [slider_expertise_connection.md](slider_expertise_connection.md) - Connection between hero slider and expertise icons (April 20, 2025)
+- [third_slide_addition.md](third_slide_addition.md) - Addition of third slide connected to Video Editing (April 20, 2025)
+- [video_format_fix.md](video_format_fix.md) - Fix for video format compatibility issue (April 20, 2025)
+- [fourth_slide_addition.md](fourth_slide_addition.md) - Addition of fourth slide connected to Digital Marketing (April 20, 2025)
+- [image_size_adjustment.md](image_size_adjustment.md) - Reduction of fourth slide image size by 20% (April 20, 2025)
 - [summary_2025-04-20.md](summary_2025-04-20.md) - Summary of all changes made on April 20, 2025
 
 ## Purpose

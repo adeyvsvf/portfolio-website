@@ -144,6 +144,20 @@
     transform: scale(1.368);
 }
 
+/* Specific styling for the web development SVG image (5th slide) */
+.slider-item:nth-child(5) img {
+    transform: scale(1.505); /* 10% larger than the default 1.368 scale */
+}
+
+/* Special styling for the fourth slide (droip.png) - match video dimensions */
+.slider-item:nth-child(4) img {
+    max-height: 504px; /* Same as videos */
+    max-width: 70%; /* Same as videos */
+    transform: scale(0.95); /* Same as videos */
+    width: auto;
+    height: auto;
+}
+
 .slider-item video {
     width: auto;
     height: auto;
@@ -321,4 +335,40 @@
     .footer-section {
         width: 100%;
     }
+}
+
+/* Web Development Icon Highlight */
+.tech-icons i.active-expertise {
+    color: var(--accent);
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+/* Pulse animation for web development icon */
+@keyframes pulse {
+    0% {
+        transform: scale(1.2);
+        text-shadow: 0 0 0 rgba(255, 87, 34, 0.5);
+    }
+    50% {
+        transform: scale(1.4);
+        text-shadow: 0 0 20px rgba(255, 87, 34, 0.8);
+    }
+    100% {
+        transform: scale(1.2);
+        text-shadow: 0 0 0 rgba(255, 87, 34, 0.5);
+    }
+}
+
+.tech-icons i.pulse-animation {
+    animation: pulse 0.75s ease-in-out;
+    animation-iteration-count: 2;
+}
+
+/* Service card highlight effect */
+.service-card.highlight-card {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 87, 34, 0.2);
+    border-color: var(--accent);
+    transition: all 0.5s ease;
 }

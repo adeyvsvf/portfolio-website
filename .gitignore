@@ -30,9 +30,11 @@ build/
 .env.test.local
 .env.production.local
 
-# Debug logs
-logs/
+# Debug logs (but keep documentation)
 *.log
+logs/*.log
+logs/claude_actions_*.log
+logs/session_*.log
 
 # Dependency directories
 bower_components/
@@ -42,3 +44,22 @@ bower_components/
 
 # Optional eslint cache
 .eslintcache
+
+# Large media files (videos over certain size)
+*.mov
+*.MOV
+*.mp4
+Videos/
+
+# PDF documents that might contain sensitive info
+*.pdf
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# OS generated files
+*.swp
+*.swo
+*~

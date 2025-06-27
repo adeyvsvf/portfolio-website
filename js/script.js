@@ -283,6 +283,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const techIcons = document.querySelectorAll('.tech-icons i');
         const mobileAppIcon = document.querySelector('.tech-icons .fa-mobile-alt');
         const graphicDesignIcon = document.querySelector('.tech-icons .fa-palette');
+        const videoEditingIcon = document.querySelector('.tech-icons .fa-video');
+        const digitalMarketingIcon = document.querySelector('.tech-icons .fa-bullhorn');
         let currentIndex = 0;
         let slideInterval;
 
@@ -304,6 +306,9 @@ document.addEventListener('DOMContentLoaded', function() {
             sliderItems[currentIndex].classList.add('active');
             sliderDots[currentIndex].classList.add('active');
             
+            // Get the web development icon for the new slide
+            const webDevIcon = document.querySelector('.tech-icons .fa-laptop-code');
+            
             // Highlight the appropriate expertise icon based on current slide
             if (currentIndex === 0) {
                 // First slide (image) - highlight mobile app icon
@@ -311,6 +316,17 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (currentIndex === 1) {
                 // Second slide (video) - highlight graphic design icon
                 graphicDesignIcon.classList.add('active-expertise');
+            } else if (currentIndex === 2) {
+                // Third slide (video) - highlight video editing icon
+                videoEditingIcon.classList.add('active-expertise');
+            } else if (currentIndex === 3) {
+                // Fourth slide (image) - highlight digital marketing icon
+                digitalMarketingIcon.classList.add('active-expertise');
+            } else if (currentIndex === 4) {
+                // Fifth slide (ghayweb.svg) - highlight web development icon
+                if (webDevIcon) {
+                    webDevIcon.classList.add('active-expertise');
+                }
             }
         }
 
@@ -410,4 +426,36 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 300);
         });
     }
+    
+    // Function to highlight Web Development icon when slide is clicked
+    window.highlightWebDev = function(event) {
+        // Prevent default anchor behavior to allow custom processing
+        event.preventDefault();
+        
+        // Get the web development icon
+        const webDevIcon = document.querySelector('.tech-icons .fa-laptop-code');
+        
+        if (webDevIcon) {
+            // Remove active class from all icons
+            document.querySelectorAll('.tech-icons i').forEach(icon => {
+                icon.classList.remove('active-expertise');
+            });
+            
+            // Add active class to web dev icon (same as other slides)
+            webDevIcon.classList.add('active-expertise');
+        }
+        
+        // Scroll to the services section
+        const servicesSection = document.getElementById('services');
+        if (servicesSection) {
+            const headerOffset = document.querySelector('header').offsetHeight + 20;
+            const targetPosition = servicesSection.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = targetPosition - headerOffset;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    };
 });
